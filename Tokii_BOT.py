@@ -4,6 +4,15 @@ import time
 import uuid
 import random
 import threading
+import json
+import subprocess
+try: #pip3 install httpx requests speedtest colorama
+	import speedtest
+	import colorama
+	import requests
+	import httpx
+except Exception as e:
+	sys.exit(e)
 
 #Token BOT Telegram
 bot = telebot.TeleBot("5657214860:AAFd-vV8KBulX0I4_pkAZcZ3ga-r8oEZNcA")
