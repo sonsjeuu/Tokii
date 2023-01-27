@@ -26,7 +26,7 @@ def send_welcome(message):
 #Lệnh Giúp Đỡ
 @bot.message_handler(commands=['help'])
 def send_help(message):
-    text = "𝙏𝙤𝙠𝙞𝙞𝙏𝙤𝙤𝙡𝙨 - 𝙏𝙧𝙖𝙣𝙓𝙪𝙖𝙣𝙎𝙤𝙣\n\n[ Tất Cả Các Lệnh ]\n\n > /start Lệnh Khởi Đầu\n > /help Lệnh Giúp Đỡ"
+    text = "𝙏𝙤𝙠𝙞𝙞𝙏𝙤𝙤𝙡𝙨 - 𝙏𝙧𝙖𝙣𝙓𝙪𝙖𝙣𝙎𝙤𝙣\n\n  [ Tất Cả Các Lệnh ]\n\n   > /start Lệnh Khởi Đầu\n\n   > /help Lệnh Giúp Đỡ\n\n  [ Phương Thức ]\n\n   > !spam SĐT Số_Lần\n\n   > !ddos-https1 url time thread\n\n   > !ddos-https2 url time\n\n   > !ddos-yolanda url time\n\n   > !ddos-storm url time thread\n\n   > !ddos-null url time thread\n\n   > !stop-ddos\n\n  [ Lưu Ý ]\n\n   • Số_Lần: Giới Hạn 9999(VD: 0011)\n\n   • thread: 5 -> 10"
     bot.send_message(message.chat.id, text)
 
 #Lệnh SPAM
