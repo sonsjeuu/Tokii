@@ -4,4 +4,5 @@ npm i fake-useragent
 npm i randomstring
 npm i request
 pip3 install -r requirements.txt
+pip install pyTelegramBotAPI
 python Tokii_BOT.py
