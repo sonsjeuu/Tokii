@@ -6,9 +6,7 @@ import random
 import threading
 import json
 import subprocess
-try: #pip3 install httpx requests speedtest colorama
-
-	import colorama
+try:
 	import requests
 	import httpx
 except Exception as e:
