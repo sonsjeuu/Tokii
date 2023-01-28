@@ -7,7 +7,7 @@ import threading
 import json
 import subprocess
 try: #pip3 install httpx requests speedtest colorama
-	import speedtest
+
 	import colorama
 	import requests
 	import httpx
