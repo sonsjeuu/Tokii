@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "fake-useragent": "^1.0.1",
-    "randomstring": "^1.2.3",
-    "request": "^2.88.2"
-  }
-}
