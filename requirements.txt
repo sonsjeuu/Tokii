@@ -1,4 +1,0 @@
-pysocks
-rich
-httpx
-requests
